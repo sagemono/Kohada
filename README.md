@@ -47,12 +47,19 @@ Talks to Mullion and Sherwood syscon controllers over UART
 
 ## Download & run
 
-Builds are distributed as a zip outside this repository (this repo does not host
-binaries). To run a build:
+Builds are distributed as archives outside this repository (this repo does not
+host binaries). Windows and Linux (x64) builds are provided.
 
-1. **Extract the entire folder first** — do not run `kohada.exe` from inside the zip. It needs the Qt DLLs and the `platforms` folder beside it.
-2. Run `kohada.exe` and read the disclaimer.
-3. Go to the **EEPROM Dump** tab, dump your EEPROM, and **save the backup to a safe location. Keep more than one copy.**
+### Windows
+
+1. You **MUST** extract Kohada to a dedicated directory. Kohada requires the Qt libraries provided to function properly and will **NOT** not run from a archive utility such as 7Zip. 
+2. Run `kohada.exe` and accept the disclaimer.
+
+### Linux (x64)
+
+1. The same premise applies as the Windows build. Extract the archive to a dedicated folder, then make the binary executable: `chmod +x kohada`.
+2. Run it: `./kohada`.
+3. **Serial access:** to talk to the syscon over USB you need read/write on the serial device (e.g. `/dev/ttyUSB0`). Add yourself to the `dialout` group once: `sudo usermod -aG dialout $USER`, then log out and back in.
 
 ## Safety: dump first, always
 
