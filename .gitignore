@@ -1,0 +1,12 @@
+/*
+!/.gitignore
+!/README.md
+!/src/
+/src/*
+!/src/core/
+/src/core/*
+!/src/core/error_codes.h
+!/icons/
+/icons/*
+!/icons/onigiri.svg
+!/assets/
